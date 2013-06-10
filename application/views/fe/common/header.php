@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>S.K. Group</title>
 
-<link href="<?php echo site_url('style.css')?>" rel="stylesheet" type="text/css" media="screen" />
+<link href="<?php echo site_url('css/style.css')?>" rel="stylesheet" type="text/css" media="screen" />
 
 <script type="text/javascript" src="<?php echo site_url('script/jquery-1.js')?>"></script>
 <script type="text/javascript" src="<?php echo site_url('script/banner.js')?>"></script>
