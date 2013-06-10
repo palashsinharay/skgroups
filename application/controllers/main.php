@@ -31,6 +31,7 @@ class Main extends CI_Controller {
                 $data['whoweare_links']=$this->Cms->get_page_basedonCatId('aboutus');
                 
 */              $data['top_menu']=$this->Cms->get_topmenu(); 
+                $data['product_cat']=$this->Cms->get_product_cat();
 //                echo "<pre>";
 //                print_r($data['top_menu']);
 //		echo "</pre>";

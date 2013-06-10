@@ -29,6 +29,15 @@ class Cms extends CI_Model {
 
 		return $this->result;
         }
+        function get_product_cat()
+        {
+                $query = $this->db->get_where($this->_categories,array ('status' => '1'));
+		//echo $this->db->last_query();
+		//die();
+		$this->result = $query->result();
+
+		return $this->result;
+        }
 
         
         //function for getting cms page content

@@ -84,6 +84,20 @@ $(function() {
       <li>
           <?php if($value->cid == 3):?>
           <a href="<?php echo site_url('main/index')?>"><?php echo $value->title;?></a>
+          
+          
+          
+          <?php elseif($value->cid == 4):?>
+          <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
+          <ul>
+              <?php foreach ($product_cat as $value) :?>
+                                
+                            
+             <li>
+            <a href="#"><?php echo $value->category_name?></a>
+            </li> 
+               <?php endforeach;?>
+          </ul>
           <?php else:?>
           <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
           <?php endif;?>
