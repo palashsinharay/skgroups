@@ -6,7 +6,7 @@ class Cms extends CI_Model {
 
 	public $_table = 'cmspage';
 	public $_meduiatable = 'media_gallery';
-	public $_newstable = 'news';
+	public $_topmenu = 'topmenu';
 	public $_job = 'job';
         public $_tender = 'tender';
 	public $_resource_center = 'resource_center';
@@ -20,6 +20,15 @@ class Cms extends CI_Model {
 		//parent::Model();
 		parent::__construct();
 	}
+        function get_topmenu()
+        {
+                $query = $this->db->get_where($this->_topmenu,array ('status' => '1'));
+		//echo $this->db->last_query();
+		//die();
+		$this->result = $query->result();
+
+		return $this->result;
+        }
 
         
         //function for getting cms page content

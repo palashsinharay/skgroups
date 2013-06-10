@@ -30,7 +30,13 @@ class Main extends CI_Controller {
                 $data['news'] = $this->Cms->get_news_list(1);
                 $data['whoweare_links']=$this->Cms->get_page_basedonCatId('aboutus');
                 
-*/                $this->load->view('fe/common/header.php',$data);
+*/              $data['top_menu']=$this->Cms->get_topmenu(); 
+//                echo "<pre>";
+//                print_r($data['top_menu']);
+//		echo "</pre>";
+//		die();
+                
+                $this->load->view('fe/common/header.php',$data);
                 $this->load->view('fe/'.$page.'.php',$data);
                 $this->load->view('fe/common/footer.php',$data);
     }
@@ -66,12 +72,12 @@ class Main extends CI_Controller {
 //		echo "</pre>";
 //		die();
                 switch ($data['pageDetail']->type) {
-                    case 'content':$this->_renderView('page',$data);
+                    case 'content':$this->_renderView('inner_page',$data);
                         break;
-                    case 'product':$this->product();
+                    case 'product':$this->_renderView('inner_page',$data);
                         break;
                     default:
-                      $this->_renderView('page',$data);
+                      $this->_renderView('inner_page',$data);
                         break;
                 }
  	    

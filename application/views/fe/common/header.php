@@ -73,8 +73,26 @@ $(function() {
 <div class="menu_section">
 <div class="menu_wrapper">
   <div id="jasmine_content">
+      <?php 
+//                      echo "<pre>";
+//                print_r($data);
+//		echo "</pre>";
+//		die();
+      ?>
+      <ul class="sf-menu" id="example">
+          <?php foreach ($top_menu as $value) : ?>
+      <li>
+          <?php if($value->cid == 3):?>
+          <a href="<?php echo site_url('main/index')?>"><?php echo $value->title;?></a>
+          <?php else:?>
+          <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
+          <?php endif;?>
+      </li>
+          <?php endforeach; ?>
+      </ul>
+      
 
-    <ul class="sf-menu" id="example">
+<!--    <ul class="sf-menu" id="example">
       <li class="current">
         <a href="#">Home</a>
   
@@ -148,7 +166,7 @@ $(function() {
   <li>
         <a href="#">Contact Us</a>
       </li>
-  </ul>
+  </ul>-->
   
   
   </div>
