@@ -42,7 +42,7 @@ class Cms extends CI_Model {
 	function get_page_content($id)
 	{
 
-		$query = $this->db->get_where($this->_table,array('id =' => $id));
+		$query = $this->db->get_where($this->_table,array('cid =' => $id));
 		$this->result = $query->result();
 		/*echo "<pre>";
 		print_r($this->result);
