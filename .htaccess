@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
 Options +FollowSymLinks
 RewriteEngine On
-RewriteBase /skgroup/
+RewriteBase /skgroups/
 
 RewriteCond $1 !(^index\.php|gif$|GIF$|jpg$|JPG$|jpeg$|JPEG$|png$|PNG$|bmp$|BMP$|js$|php$|htm$|html$|css$|ttf$|txt$|pdf$|swf$|flv$|mp3$|robots\.txt$|video_chat$)
 
