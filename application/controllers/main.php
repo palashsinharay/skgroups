@@ -48,10 +48,13 @@ class Main extends CI_Controller {
 
     public function index()
     {
-				
-                $data['']="";
-		//$this->_renderView('index',$data);
-                $this->_renderView('index',$data);
+                $data['pageDetail'] = $this->Cms->get_page_content(8);
+//                echo "<pre>";
+//                print_r($data['pageDetail']);
+//		echo "</pre>";
+//		die();
+		$this->_renderView('index',$data);
+
     }
 
     public function page($id)
