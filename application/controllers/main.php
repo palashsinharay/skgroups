@@ -50,7 +50,8 @@ class Main extends CI_Controller {
     {
 				
                 $data['']="";
-		$this->_renderView('index',$data);
+		//$this->_renderView('index',$data);
+                $this->_renderView('index',$data);
     }
 
     public function page($id)

@@ -304,33 +304,26 @@ function add_field_callback_1()
     $this->_example_output($output);
 }
 
-    function  media_gallery() {
+    function  categories() {
     $crud = new grocery_CRUD();
 
     //below code is for datagrid view
     $crud->set_theme('datatables');
-    $crud->set_table('media_gallery')
-        ->set_subject('Media Library')
-        ->columns('id','Mediatitle','Mediadetails','mediaimage','date','status');
-        //->display_as('menutitle','Title')
-       // ->display_as('content','Content')
-       // ->display_as('pid','parent id');
+    $crud->set_table('categories')
+        ->set_subject('Product Categories')
+        ->columns('categories_id','category_name','status')
+        ->display_as('categories_id','Categories ID')
+        ->display_as('category_name','Categories Name')
+        ->display_as('status','Status');
+        
 
 
     //below code is for edit and add
-    $crud->fields('Mediatitle','Mediadetails','mediaimage','date','status');
-    //$crud->required_fields('title','email',);
-
-
-
+    $crud->fields('category_name','status');
     //below is validation
-            $crud->set_rules('Mediatitle','Mediatitle ','required')
-         ->set_rules('Mediadetails','Mediadetails','required')
-         ->set_rules('mediaimage','mediaimage ','required')
-                     ->set_rules('date','date','required');
+         $crud->set_rules('categories_name','Categories Mame ','required')
+               ->set_rules('status','Status','required');
     //below code is for file upload
-    $crud->set_field_upload('mediaimage','assets/uploads/files');
-
     $output = $crud->render();
     $this->_example_output($output);
 }
