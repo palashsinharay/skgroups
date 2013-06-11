@@ -60,7 +60,10 @@ class Main extends CI_Controller {
 //                print_r($data['pageDetail']);
 //		echo "</pre>";
 //		die();
-		$this->_renderView('index',$data);
+		
+        $this->_renderView('index',$data);
+        
+        
 
     }
 

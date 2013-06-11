@@ -1,5 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>S.K. Group</title>
@@ -8,37 +11,13 @@
 <link rel="stylesheet" type="text/css" href="<?php echo site_url('css/jquery.lightbox-0.4.css')?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo site_url('css/superfish.css')?>">
 
-<script type="text/javascript" src="<?php echo site_url('script/jquery-1.js')?>"></script>
+
 <script type="text/javascript" src="<?php echo site_url('script/banner.js')?>"></script>
 <script type="text/javascript" src="<?php echo site_url('script/jquery.js')?>"></script>
 <script type="text/javascript" src="<?php echo site_url('script/jquery.lightbox-0.4.pack.js')?>"></script>
 
 
-<script type="text/javascript">
-$(function() {
-    $(".carouel_area").jCarouselLite({
-        btnNext: ".next",
-        btnPrev: ".prev"
-    });
-});
 
-</script>
-
-<!--######################################################-->
-
- 
-  
-  <script>
-    (function() {
-      var jasmineEnv = jasmine.getEnv()
-      jasmineEnv.addReporter(new jasmine.HtmlReporter)
-      window.onload = function() {
-        jasmineEnv.execute()
-      };
-    })();
-  </script>
-
-<!--######################################################-->
 
 <script type="text/javascript">
     $(function() {
