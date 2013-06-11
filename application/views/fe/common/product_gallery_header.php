@@ -86,7 +86,7 @@
                                 
                             
              <li>
-            <a href="#"><?php echo $value->category_name?></a>
+            <a href="<?php echo site_url('product/productList/'.$value->categories_id)?>"><?php echo $value->category_name?></a>
             </li> 
                <?php endforeach;?>
           </ul>
