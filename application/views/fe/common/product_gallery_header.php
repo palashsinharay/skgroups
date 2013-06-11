@@ -21,7 +21,7 @@
 
 <script type="text/javascript">
     $(function() {
-        $('#gallery a').lightBox();
+        $('#gallery a.light').lightBox();
 		$('#cottage a').lightBox();
 		$('#plan a').lightBox();
     });

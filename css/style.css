@@ -43,7 +43,7 @@ body{font-family:Verdana, Arial, sans-serif; font-size:12px; font-weight:normal;
 
 a img{border:0;}
 
-a{text-decoration:none; outline:0; cursor:pointer; color:#ffcc00; font-weight:normal;}
+a{text-decoration:none; outline:0; cursor:pointer; color:#61686e; font-weight:normal;}
 a:hover{text-decoration:none;}
 
 input, input.text, select, textarea, button, .button, textarea {border:solid 1px; padding:2px;}
@@ -159,7 +159,7 @@ table.form label.email { border-bottom: 1px dotted #000000; }
 
 
 
-#gallery {background-color:#e0e5ea; margin:0 auto; width:880px; padding:20px 0 0 15px; height:600px;}
+#gallery {background-color:#e0e5ea; margin:0 auto; width:880px; padding:20px 0 0 15px;}
 #gallery ul {list-style:none;}
 #gallery ul li { display:inline; background:#b9bfc4; border-width: 10px; width:220px; margin:0 0 10px 10px; padding-bottom:5px;}
 #gallery ul img {border:1px solid #b9bfc4; border-width:2px;}
