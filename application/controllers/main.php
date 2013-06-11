@@ -49,6 +49,7 @@ class Main extends CI_Controller {
                 //$data['whoweare_links']=$this->Cms->get_page_basedonCatId('aboutus');
                 
                 $data['top_menu']=$this->Cms->get_topmenu();
+                $data['product_cat']=$this->Cms->get_product_cat();
                 $this->load->view('fe/common/product_gallery_header.php',$data);
                 $this->load->view('fe/'.$page.'.php',$data);
                 $this->load->view('fe/common/footer.php',$data);

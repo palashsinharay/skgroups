@@ -56,7 +56,7 @@ $(function() {
 <div id="top_border"></div>
 <div class="top_content">
 <div class="top_pan">
-    <div class="logo"><a href="index.html"><img src="<?php echo site_url('images/logo.png')?>" alt="Surjo Sakha - A Green Initiative" title="Surjo Sakha - A Green Initiative" /></a></div>
+    <div class="logo"><a href="index.html"><img src="<?php echo site_url('images/logo.png')?>" alt="S.K. Groups" title="S.K. Groups" /></a></div>
     
 
 <div class="top_right">
