@@ -112,7 +112,7 @@ select {width:auto; height:24px;}
 
 /***************************Footer***************************/
 
-.footer{background:url(images/footer_img.jpg) 0 0 repeat-x; height:100px;}
+.footer{background:url(../images/footer_img.jpg) 0 0 repeat-x; height:100px;}
 .footer_content{width:1000px; margin: 0 auto;}
 .footer_logo{background:url(images/footer_logo.png) 0 0 no-repeat; width:83px; height:82px; float:right; margin:10px 3px 0 0;}
 .footer_left{width:350px; height:auto; float:left; margin-bottom:13px;}
