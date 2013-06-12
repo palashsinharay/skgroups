@@ -69,7 +69,7 @@ $(function() {
     <ul>
     <li><a  href="<?php echo site_url('main/index');?>" >Home</a><span>|</span></li>
 <!--    <li><a href="#">Sitemap</a><span>|</span></li>-->
-    <li><a href="<?php echo site_url('main/index/9');?>">Contacts</a></li>
+    <li><a href="<?php echo site_url('main/page/7');?>">Contacts</a></li>
     </ul>
     <div class="clear"></div>
 <!--    <div class="top_link">
