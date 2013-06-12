@@ -12,7 +12,7 @@
 <div class="clear"></div>    
     
 <div class="content_area">
-<h2>Photo <span>Gallery</span></h2>
+<h2>Product <span>Gallery</span></h2>
 
 <div id="gallery">
       <ul>
