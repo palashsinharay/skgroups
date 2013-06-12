@@ -1,3 +1,8 @@
+<?php 
+//echo $this->uri->segment(3);
+//echo $this->uri->segment(2);
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -62,18 +67,18 @@ $(function() {
 <div class="top_right">
 
     <ul>
-    <li><a href="#">Home</a><span>|</span></li>
-    <li><a href="#">Sitemap</a><span>|</span></li>
-    <li><a href="#">Contacts</a></li>
+    <li><a  href="<?php echo site_url('main/index');?>" >Home</a><span>|</span></li>
+<!--    <li><a href="#">Sitemap</a><span>|</span></li>-->
+    <li><a href="<?php echo site_url('main/index/9');?>">Contacts</a></li>
     </ul>
     <div class="clear"></div>
-    <div class="top_link">
+<!--    <div class="top_link">
     <h4>Follow us:</h4>
     <ul>
     <li><a href="#"><img src="<?php echo site_url('images/twitter.png')?>" alt="Twitter" title="Twitter" /></a></li>
     <li><a href="#"><img src="<?php echo site_url('images/facebook.png')?>" alt="facebook" title="Facebook" /></a></li>
     <li><a href="#"><img src="<?php echo site_url('images/linkedin.png')?>" title="Linkedin" /></a></li>
-    </ul>
+    </ul>-->
     </div>
     
     </div>
@@ -96,12 +101,12 @@ $(function() {
           <?php foreach ($top_menu as $value) : ?>
       <li>
           <?php if($value->cid == 3):?>
-          <a href="<?php echo site_url('main/index')?>"><?php echo $value->title;?></a>
+          <a href="<?php echo site_url('main/index')?>"  class="<?php echo $this->uri->segment(2)=='index'?'current':'';?>"><?php echo $value->title;?></a>
           
           
           
           <?php elseif($value->cid == 4):?>
-          <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
+          <a id="<?php echo $value->cid;?>" href="#" class="<?php echo $this->uri->segment(2)== 'productList'?'current':'';?>"><?php echo $value->title;?></a>
           <ul>
               <?php foreach ($product_cat as $value) :?>
                                 
@@ -112,89 +117,11 @@ $(function() {
                <?php endforeach;?>
           </ul>
           <?php else:?>
-          <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
+          <a id="<?php echo $value->cid;?>" href="<?php echo site_url('main/page/'.$value->cid)?>" class="<?php echo $this->uri->segment(2).'/'.$this->uri->segment(3)== 'page'.'/'.$value->cid?'current':'';?>"><?php echo $value->title;?></a>
           <?php endif;?>
       </li>
           <?php endforeach; ?>
       </ul>
-      
-
-<!--    <ul class="sf-menu" id="example">
-      <li class="current">
-        <a href="#">Home</a>
-  
-      </li>
-      <li>
-        <a href="#">About Us</a>
-      </li>
-      <li>
-        <a href="#">Products</a>
-        <ul>
-          <li>
-            <a href="#">export &amp; import</a>
-            <ul>
-              <li><a href="#">short</a></li>
-              <li><a href="#">short</a></li>
-              <li><a href="#">short</a></li>
-              <li><a href="#">short</a></li>
-              <li><a href="#">short</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">menu item</a>
-            <ul>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">menu item</a>
-            <ul>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">menu item</a>
-            <ul>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">menu item</a>
-            <ul>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-              <li><a href="#">menu item</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Sales Areas</a>
-      </li> 
-    
-
-  <li>
-        <a href="#">Apply</a>
-      </li>
-  <li>
-        <a href="#">Contact Us</a>
-      </li>
-  </ul>-->
-  
   
   </div>
 

@@ -58,8 +58,9 @@ class Main extends CI_Controller {
     public function index()
     {
                 $data['pageDetail'] = $this->Cms->get_page_content(8);
+                $data['feturedProduct'] = $this->Cms->get_fetured_product();
 //                echo "<pre>";
-//                print_r($data['pageDetail']);
+//                print_r($data['feturedProduct']);
 //		echo "</pre>";
 //		die();
 		

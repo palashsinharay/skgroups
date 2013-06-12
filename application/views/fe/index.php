@@ -59,32 +59,14 @@
 </div>
 
 <div class="middle_pan">
-<div class="column four margin_right">
-  <img src="<?php echo site_url('images/small_img_1.jpg')?>" alt="" />
-  <h4>Lorem Ipsum </h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumt...</p>
-  <a href="#" class="more">...more</a>
+<?php foreach ($feturedProduct as $value): ?>    
+ <div class="column four margin">
+  <img src="<?php echo site_url('assets/uploads/files/'.$value->product_image)?>" alt="" />
+  <h4><?php echo $value->product_name;?> </h4>
+  <p><?php echo $value->product_short_description;?></p>
+  <a href="<?php echo site_url('product/productDetail/'.$value->product_id);?>" class="more">...more</a>
 </div>
-
-<div class="column four margin_right">
-	<img src="<?php echo site_url('images/small_img_2.jpg')?>" alt="" />
-  <h4>Lorem Ipsum </h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumt...</p>
-  <a href="#" class="more">...more</a>
-</div>
-<div class="column four margin_right">
-	<img src="<?php echo site_url('images/small_img_3.jpg')?>" alt="" />
-  <h4>Lorem Ipsum </h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumt...</p>
-  <a href="#" class="more">...more</a>
-</div>
-<div class="column four">
-	<img src="<?php echo site_url('images/small_img_4.jpg')?>" alt="" />
-  <h4>Lorem Ipsum </h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumt...</p>
-  <a href="#" class="more">...more</a>
-</div>
-
+<?php endforeach; ?>
 <div class="clear"></div>
 </div>
 

@@ -67,7 +67,7 @@
 .sf-menu ul ul li {
 	background: #d5dfe8; 
 }
-.sf-menu li:hover, .sf-menu li.current,
+.sf-menu li:hover, .sf-menu li a.current,
 .sf-menu li.sfHover {
 	background: #c3ced7;
 	/* only transition out, not in */

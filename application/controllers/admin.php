@@ -270,7 +270,7 @@ function add_field_callback_1()
     $crud->set_theme('datatables');
     $crud->set_table('products')
         ->set_subject('Products')
-        ->columns('product_name','product_code','categories_id','product_short_description','product_long_description','product_image','product_price','product_status')
+        ->columns('product_name','product_code','categories_id','product_short_description','product_long_description','product_image','product_price','product_status','featured')
         ->display_as('product_name','Product Name')
         ->display_as('product_code','Product Code')
         ->display_as('categories_id','Product Category')
@@ -278,11 +278,12 @@ function add_field_callback_1()
         ->display_as('product_long_description','Long Description')
         ->display_as('product_image','Product Image')
         ->display_as('product_price','Product Price')    
-        ->display_as('product_status','Product Status');
+        ->display_as('product_status','Product Status')
+        ->display_as('featured','Fetured Product');
 
 
     //below code is for edit and add
-    $crud->fields('product_name','product_code','categories_id','product_short_description','product_long_description','product_image','product_price','product_status');
+    $crud->fields('product_code','categories_id','product_short_description','product_long_description','product_image','product_price','product_status','featured');
     //$crud->required_fields('title','email',);
 
 
@@ -295,7 +296,8 @@ function add_field_callback_1()
                  ->set_rules('product_long_description','Long Description','required')
                  ->set_rules('product_image','Product Image','required')   
                  ->set_rules('product_price','Product Price','required')
-                 ->set_rules('product_status','Product Status','required');
+                 ->set_rules('product_status','Product Status','required')
+                 ->set_rules('featured','Fetured Product','required');;
     //below code is for file upload
     $crud->set_field_upload('product_image','assets/uploads/files');
     //$crud->set_relation('cid','cmspage','menutitle');

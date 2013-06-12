@@ -38,6 +38,15 @@ class Cms extends CI_Model {
 
 		return $this->result;
         }
+        function get_category_name($catID)
+        {
+                $query = $this->db->get_where($this->_categories,array ('categories_id' => $catID));
+		//echo $this->db->last_query();
+		//die();
+		$this->result = $query->result();
+
+		return $this->result[0];
+        }
 
         
         //function for getting cms page content
@@ -134,6 +143,16 @@ class Cms extends CI_Model {
 
 		return $this->result;
 	}
+	function get_fetured_product()
+	{
+		$query = $this->db->get_where($this->_product,array('featured' => 1),4);
+		
+                
+		$this->result = $query->result();
+
+		return $this->result;
+	}        
+        
         
         function get_productDetail($product_id) {
                 $query = $this->db->get_where($this->_product,array('product_id' => $product_id));

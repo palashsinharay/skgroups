@@ -1,3 +1,4 @@
+
 <div class="container"> 
 
 <!-- inner head start -->
@@ -12,7 +13,7 @@
 <div class="clear"></div>    
     
 <div class="content_area">
-<h2>Product <span>Gallery</span></h2>
+<h2><?php echo $categoryDetail->category_name;?></h2>
 
 <div id="gallery">
       <ul>

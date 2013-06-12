@@ -102,7 +102,8 @@ select {width:auto; height:24px;}
 .column p {color:#5f6568; line-height:18px; font-size:11.5px; text-align:left; margin-bottom:5px;}
 .column a.more {font:11px/14px Arial, Helvetica, sans-serif; font-weight:bold; color:#0b70c2; text-decoration:none; float:right; width:auto;}
 .four {width:23%;}
-.margin_right {margin-right:12px;}
+/*.margin_right {margin-right:12px;}*/
+.margin {margin:0 4.8px;}
 
 
 .content_area{padding:20px 10px;}

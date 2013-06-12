@@ -49,7 +49,8 @@ class Product extends Main {
 
     public function productList($catId)
     {
-		$data['productList'] = $this->Cms->get_productList($catId);
+		$data['categoryDetail'] = $this->Cms->get_category_name($catId);
+                $data['productList'] = $this->Cms->get_productList($catId);
                 //print_r($data);
                 $this->_renderViewG('product_gallery',$data);
     }

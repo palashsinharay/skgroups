@@ -1,3 +1,9 @@
+<?php 
+
+
+//echo $this->uri->segment(3);
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -40,20 +46,20 @@
 
 <div class="top_right">
 
-    <ul>
-    <li><a href="#">Home</a><span>|</span></li>
-    <li><a href="#">Sitemap</a><span>|</span></li>
-    <li><a href="#">Contacts</a></li>
+   <ul>
+    <li><a href="<?php echo site_url('main/index');?>">Home</a><span>|</span></li>
+<!--    <li><a href="#">Sitemap</a><span>|</span></li>-->
+    <li><a href="<?php echo site_url('main/index/9');?>">Contacts</a></li>
     </ul>
     <div class="clear"></div>
-    <div class="top_link">
+<!--    <div class="top_link">
     <h4>Follow us:</h4>
     <ul>
     <li><a href="#"><img src="<?php echo site_url('images/twitter.png')?>" alt="Twitter" title="Twitter" /></a></li>
     <li><a href="#"><img src="<?php echo site_url('images/facebook.png')?>" alt="facebook" title="Facebook" /></a></li>
     <li><a href="#"><img src="<?php echo site_url('images/linkedin.png')?>" title="Linkedin" /></a></li>
     </ul>
-    </div>
+    </div>-->
     
     </div>
 
@@ -75,12 +81,12 @@
           <?php foreach ($top_menu as $value) : ?>
       <li>
           <?php if($value->cid == 3):?>
-          <a href="<?php echo site_url('main/index')?>"><?php echo $value->title;?></a>
+          <a href="<?php echo site_url('main/index')?>" class="<?php echo $this->uri->segment(2)=='index'?'current':'';?>"><?php echo $value->title;?></a>
           
           
           
           <?php elseif($value->cid == 4):?>
-          <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
+          <a id="<?php echo $value->cid;?>" href="#" class="<?php echo $this->uri->segment(2)== 'productList'?'current':'';?>"><?php echo $value->title;?></a>
           <ul>
               <?php foreach ($product_cat as $value) :?>
                                 
@@ -91,7 +97,7 @@
                <?php endforeach;?>
           </ul>
           <?php else:?>
-          <a href="<?php echo site_url('main/page/'.$value->cid)?>"><?php echo $value->title;?></a>
+          <a id="<?php echo $value->cid;?>" href="<?php echo site_url('main/page/'.$value->cid)?>" class="<?php echo $this->uri->segment(2).'/'.$this->uri->segment(3)== 'page'.'/'.$value->cid?'current':'';?>"><?php echo $value->title;?></a>
           <?php endif;?>
       </li>
           <?php endforeach; ?>
