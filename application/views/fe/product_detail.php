@@ -12,7 +12,7 @@
 <div class="clear"></div>    
     
 <div class="content_area">
-<h2>Product <span>Detail</span> </h2>
+<!--<h2>Product <span>Detail</span> </h2>-->
 
 <h1><?php echo $productDetail->product_name; ?></h1>
 <div class="clear"></div>
