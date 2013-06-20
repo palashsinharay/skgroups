@@ -12,7 +12,7 @@
     <li><a href="<?php echo site_url('main/page/11');?>">Terms &amp; Conditions</a></li>
     </ul>
 </div>
-<div class="footer_left_2">� 2013 S. K. Group. All Rights Reserved.</div>
+<div class="footer_left_2">&copy 2013 S. K. Group. All Rights Reserved.</div>
 </div>
 </div>
 </div>

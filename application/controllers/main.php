@@ -195,8 +195,8 @@ class Main extends CI_Controller {
                             ';
 
 
-                            $status = $this->email_send($message,'sahani.bunty9@gmail.com',$posted["email"]);
-                            //$status = $this->email_send($message,'contact@webcon.in',$posted["email"]);
+                           // $status = $this->email_send($message,'sahani.bunty9@gmail.com',$posted["email"]);
+                            $status = $this->email_send($message,'info@skgroups.org',$posted["email"]);
 
                             if($status == 'success'){
                                echo "Thank you for contacting us"; 
@@ -278,8 +278,8 @@ public function enquiry_email()
                             ';
 
 
-                            $status = $this->email_send($message,'sahani.bunty9@gmail.com',$posted["email"]);
-                            //$status = $this->email_send($message,'contact@webcon.in',$posted["email"]);
+                            //$status = $this->email_send($message,'sahani.bunty9@gmail.com',$posted["email"]);
+                            $status = $this->email_send($message,'info@skgroups.org',$posted["email"]);
 
                             if($status == 'success'){
                                echo "Thank you for your enquiry"; 

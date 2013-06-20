@@ -59,7 +59,7 @@ function validateEmail(user_email){
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>WEBCON</title>
+<title>SK GROUPS</title>
 <style>
 /* Reset CSS */
 html, body, div, span, applet, object, iframe,
