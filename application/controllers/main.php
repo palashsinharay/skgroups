@@ -48,6 +48,7 @@ class Main extends CI_Controller {
                 //$data['news'] = $this->Cms->get_news_list(1);
                 //$data['whoweare_links']=$this->Cms->get_page_basedonCatId('aboutus');
                 
+               // echo "hiii";
                 $data['top_menu']=$this->Cms->get_topmenu();
                 $data['product_cat']=$this->Cms->get_product_cat();
                 $this->load->view('fe/common/product_gallery_header.php',$data);
@@ -84,6 +85,8 @@ class Main extends CI_Controller {
                     case 'product':$this->_renderView('inner_page',$data);
                         break;
                      case 'contact':$this->_renderViewContact('contact_us',$data);
+                        break;
+                     case 'enquiry':$this->_renderViewContact('enquiry',$data);
                         break;
                     default:
                       $this->_renderView('inner_page',$data);
@@ -208,6 +211,89 @@ class Main extends CI_Controller {
                                     show_error($err_obj->getMessage());
                     }
             }
+            
+            
+public function enquiry_email()
+    {
+                    try
+                    {
+                            unset($_POST['action']);
+                            $posted=array();
+                            $posted["f_name"]  	= trim($this->input->post("f_name"));
+                            $posted["l_name"]  	= trim($this->input->post("l_name"));
+                            $posted["email"]  	= trim($this->input->post("email"));
+                            $posted["phone"]  = trim($this->input->post("phone"));
+                            $posted["address"]  = trim($this->input->post("address"));
+                            $posted["address2"]  = trim($this->input->post("address2"));
+                            $posted["address3"]  = trim($this->input->post("address3"));
+                            $posted["city"]  = trim($this->input->post("city"));
+                            $posted["country"]  = trim($this->input->post("country"));
+                            $posted["postcode"]  = trim($this->input->post("postcode"));
+                            $posted["message"]  = trim($this->input->post("message"));
+//                            echo "hello";
+//                            echo "<pre>";
+//                            print_r($posted);
+//                            echo "</pre>";
+//                            die();
+                                                           
+                            // Call model and insert data
+                            //$this->form_validation->set_rules('fname', 'fname', 'trim|required|xss_clean');
+                            //$this->form_validation->set_rules('lname', 'lname', 'trim|required|xss_clean');
+                            $this->form_validation->set_rules('f_name', 'f_name', 'trim|required|xss_clean');
+                            $this->form_validation->set_rules('l_name', 'l_name', 'trim|required|xss_clean');
+                            $this->form_validation->set_rules('email', 'email', 'trim|required|xss_clean');
+                            $this->form_validation->set_rules('phone', 'phone', 'trim|required|xss_clean');
+                            $this->form_validation->set_rules('message', 'message', 'trim|required|xss_clean');
+                            $this->form_validation->set_message('required', 'Please fill in the fields');
+                            if($this->form_validation->run() == FALSE)/////invalid
+                            {
+                            ////////Display the add form with posted values within it////
+                            $this->data["posted"]=$posted;
+                            }
+                            else
+                            {
+                            // ------------------ email send code start ------------------ //
+
+                            $message='
+                            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                            <html xmlns="http://www.w3.org/1999/xhtml">
+                            <head></head>
+                            <body>
+                            <table>
+                            <tr><td>First Name:</td><td>' .  $posted['f_name'].'</td></tr>
+                            <tr><td>Last Name:</td><td>' . $posted["l_name"] . '</td></tr>
+                            <tr><td>Email:</td><td>' . $posted["email"] . '</td></tr>
+                            <tr><td>Phone:</td><td>' . $posted["phone"] . '</td></tr>
+                            <tr><td>Address:</td><td>' . $posted["address"] . '</td></tr>
+                            <tr><td>Address2:</td><td>' .  $posted['address2'].'</td></tr>
+                            <tr><td>Address3:</td><td>' . $posted["address3"] . '</td></tr>
+                            <tr><td>City:</td><td>' . $posted["city"] . '</td></tr>
+                            <tr><td>Country:</td><td>' . $posted["country"] . '</td></tr>
+                            <tr><td>Postcode:</td><td>' . $posted["postcode"] . '</td></tr> 
+                            <tr><td>Message:</td><td>' . nl2br($posted["message"]) . '</td></tr>   
+                            </table>
+                            </body>
+                            </html>
+                            ';
+
+
+                            $status = $this->email_send($message,'sahani.bunty9@gmail.com',$posted["email"]);
+                            //$status = $this->email_send($message,'contact@webcon.in',$posted["email"]);
+
+                            if($status == 'success'){
+                               echo "Thank you for your enquiry"; 
+                            } else {
+                               echo "Message sending failed !"; 
+                            }
+
+                            }								
+                    }
+                    catch(Exception $err_obj)
+                    {
+                                    show_error($err_obj->getMessage());
+                    }
+            }            
         
 	
     public function email_send($message,$email_to,$email_from,$filepath = null)
