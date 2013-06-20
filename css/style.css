@@ -86,10 +86,10 @@ select {width:auto; height:24px;}
 .slideshow .slides{width:984px; height:352px; margin:0; visibility:hidden; position:absolute;}
 .slideshow .slides img {border:1px solid #bbb; border-top:none; padding:10px;}
 .slideshow .buttons {display:block; position:absolute; z-index:100; right:45%; bottom:15px; margin:0;}
-.slideshow .buttons li {float:left; display:inline; width:15px; height:15px; margin:0; line-height:20px; background-image:url(images/hov.png); background-repeat:no-repeat;}
-.slideshow .buttons li a {float:left; text-decoration:none; width:15px; height:15px; color:#fff; outline:0; background:url(images/nor.png) 0 0 no-repeat;}
+.slideshow .buttons li {float:left; display:inline; width:15px; height:15px; margin:0; line-height:20px; background-image:url(../images/hov.png); background-repeat:no-repeat;}
+.slideshow .buttons li a {float:left; text-decoration:none; width:15px; height:15px; color:#fff; outline:0; background:url(../images/nor.png) 0 0 no-repeat;}
 .slideshow ul.buttons li a:hover {text-decoration:none; background:url(images/hov.png) 0 0 no-repeat;}
-.slideshow ul.buttons li.active a {background:url(images/act.png) 0 0 no-repeat;}
+.slideshow ul.buttons li.active a {background:url(../images/act.png) 0 0 no-repeat;}
 
 .inner_head {background:url(images/shadow.png) 0 bottom no-repeat; display:block; position:relative; z-index:10; width:962px; height:185px; text-align:center;}
 .inner_head img { width:942px; height:150px; margin:0; border:1px solid #e2e1e1; border-top:none; border-bottom:none; padding:10px; position:absolute; left:10px;}

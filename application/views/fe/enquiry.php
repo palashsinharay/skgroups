@@ -216,7 +216,8 @@ function validateEmail(user_email){
 		</table>
 	</form>
 
-<div class="success-message" style="display:none; color:#FF0000; font-size:14px; font-weight:600; margin-left: 111px;"></div>
+<br/>
+<div class="success-message" style="display:none; color:#FF0000; font-size:14px; font-weight:600; margin-left: 207px;"></div>
 
 <div class="clear"></div>
 </div>

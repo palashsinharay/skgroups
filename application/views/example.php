@@ -41,7 +41,7 @@ a:hover
 <!--                <li id="home"><a href="#home" class="homeIcon">Home</a></li>-->
                 <li id="news"><a href='<?php echo site_url('admin/cms_page')?>'>CMS</a> </li>
                 <li id="about"><a href='<?php echo site_url('admin/topmenu')?>'>Topmenu</a></li>
-                <li id="services"><a href='<?php echo site_url('admin/upperslider')?>'>UpperSlider</a></li>
+<!--                <li id="services"><a href='<?php echo site_url('admin/upperslider')?>'>UpperSlider</a></li>-->
                 <li id="services"><a href='<?php echo site_url('admin/categories')?>'>Product Category</a></li>
                 <li id="contact"><a href='<?php echo site_url('admin/products')?>'>Products</a></li>
                 <li id="services"><a href='<?php echo site_url('admin/resource_center')?>'>Resource Center</a></li>
